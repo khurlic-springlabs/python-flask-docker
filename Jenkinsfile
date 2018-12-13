@@ -26,7 +26,7 @@ pipeline {
         branch 'master'
       }
       steps {
-        git 'https://github.com/khurlic/python-flask-docker.git'
+        git 'https://github.com/khurlic-springlabs/python-flask-docker.git'
         sh 'echo $(jx-release-version) > VERSION'
         sh 'jx step tag --version $(cat VERSION)'
         sh 'python -m unittest'
