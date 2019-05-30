@@ -4,7 +4,8 @@ build:
   artifacts:
   - image: khurlic-springlabs/python-flask-docker
     context: .
-    docker: {}
+    docker:
+      network: Host
   tagPolicy:
     envTemplate:
       template: '{{.DOCKER_REGISTRY}}/{{.IMAGE_NAME}}:{{.VERSION}}'
